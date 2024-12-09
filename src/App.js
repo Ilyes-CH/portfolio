@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './components/header';
 
 class MyComponent extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class MyComponent extends Component {
   render() {
     return (
       <div>
+        <Header />
         <p>Count: {this.state.count}</p>
         <button onClick={this.increment}>Increment</button>
       </div>
