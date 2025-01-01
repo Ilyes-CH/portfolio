@@ -2,6 +2,7 @@ import React, { Component, lazy, Suspense } from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const ContactSection =lazy(()=>import('./components/ContactSection')) ;
+const Projects =lazy(()=>import('./components/projects')) ;
 const Home = lazy(() => import('./components/Home'))
 const Header = lazy(() => import('./components/header'))
 const Footer = lazy(() => import('./components/footer'))
@@ -21,6 +22,7 @@ class MyComponent extends Component {
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<ContactSection />} />
             <Route path='/about' element={<About />} />
+            <Route path='/projects' element={<Projects />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           </Suspense>
